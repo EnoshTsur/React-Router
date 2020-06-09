@@ -1,25 +1,11 @@
 import React from 'react';
-import Button from './components/Button/Button'
+import Navigation from './components/Navigation/Navigation'
+import { Router, Switch, Route, } from 'react-router-dom'
 
 function App() {
   return (
     <div> 
-        <Button 
-            title="Click Me" 
-            type="success" 
-            onClick={() => console.log('hi')}
-        />
-
-        <Button 
-            title="Click Me"  
-            onClick={() => console.log('hi')}
-        />
-
-        <Button 
-            disabled
-            title="Click Me"  
-            onClick={() => console.log('hi')}
-        />
+        <Navigation />
    </div>
   );
 }
