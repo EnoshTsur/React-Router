@@ -6,8 +6,15 @@ import Button from '../Button/Button';
 export default function Homepage() {
 
     const [ toggle, setToggle, ] = React.useState(false)
+    const [ isMobile, setMobile, ] = React.useState(false)
 
     const isInitialMount = React.useRef(true)
+
+    React.useEffect(() => {
+        const mq = window.matchMedia('(max-width: 768px)')
+        setMobile(mq.matches)
+        mq.addListener((mq) =>  setMobile(mq.matches))
+    }, [])
 
     React.useEffect(() => {
         if (isInitialMount.current) {
@@ -19,8 +26,7 @@ export default function Homepage() {
 
     return (
        <div>
-           <Mobile />
-           <Desktop />
+           { isMobile ? <Mobile /> : <Desktop /> }
            <div style={{
                textAlign: 'center'
            }}>
