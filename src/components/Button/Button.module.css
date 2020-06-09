@@ -1,0 +1,48 @@
+.Btn {
+    margin: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+}
+
+.Btn:hover {
+    cursor: pointer;
+}
+
+.Btn:focus {
+    outline: none;
+}
+
+.BtnSuccess {
+    background-color: #04AA51;
+    border: 2px solid rgb(54, 209, 126);
+}
+
+.BtnSuccess:hover {
+    background-color: rgb(34, 139, 83);
+    border: 2px solid #04AA51;
+}
+
+.BtnSuccess:active {
+    background-color: rgb(31, 105, 66);
+    border: 2px solid rgb(16, 128, 68);
+}
+
+
+.BtnDefault {
+    background-color: #ccc;
+    border: 2px solid #d9d9d9;
+}
+
+.BtnDefault:hover {
+    background-color: rgb(153, 153, 153);
+    border: 2px solid #ccc;
+
+}
+
+.BtnDefault:active {
+    background-color: rgb(124, 123, 123);
+    border: 2px solid rgb(158, 158, 158);
+
+}

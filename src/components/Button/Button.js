@@ -1,12 +1,13 @@
 import React from 'react'
-import Radium from 'radium'
 
-function Button({ title, onClick, disabled=false, type="default" }) {
+function Button({ title, onClick, disabled=false, type, key, }) {
 
     
     const success = 'success'
 
     const style  = {
+        margin: '0.5rem',
+        fontFamily: 'Raleway, sans-serif',
         padding: '0.5rem 1rem',
         color: 'white',
         backgroundColor: type === success ? '#04AA51' :  '#d9d9d9',
@@ -29,10 +30,11 @@ function Button({ title, onClick, disabled=false, type="default" }) {
             onClick={onClick} 
             disabled={disabled}    
             style={style}
+            key={key}
         >
             {title}
         </button>
     )
 }
 
-export default Radium(Button)
+export default Button
