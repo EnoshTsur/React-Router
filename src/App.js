@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div> 
-        <Navigation />
+        <Navigation history={history}/>
         <Router history={history}>
             <Switch>
                 <Route exact path="/" component={Homepage} />

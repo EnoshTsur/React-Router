@@ -1,7 +1,13 @@
 import React from 'react'
 import Button from '../Button/Button'
+import { Router, Link, } from 'react-router-dom'
 
-export default function Navigation() {
+export default function Navigation({ history, }) {
+
+    const homepage = "/homepage"
+    const about = "/about"
+    const contacts ="/contacts"
+
     return (
         <nav style={{
             display: 'flex',
@@ -9,15 +15,31 @@ export default function Navigation() {
             backgroundColor: '#e8e8e8',
             flexWrap: 'wrap'
         }}>
-            <Button
-                title="Homepage"
-            />
-            <Button
-                title="About"
-            />
-            <Button
-                title="Contacts"
-            />
+            <Router history={history}>
+                <Link to={homepage}>
+                    <Button
+                        title="Homepage"
+                    />
+                </Link>
+            </Router>
+
+            <Router history={history}>
+                <Link to={about}>
+                    <Button
+                        title="About"
+                    />
+                </Link>
+            </Router>
+
+        
+
+            <Router history={history}>
+                <Link to={contacts} >
+                    <Button
+                        title="Contacts"
+                    />
+                </Link>
+            </Router>
         </nav>
     )
 }
